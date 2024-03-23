@@ -11,13 +11,13 @@
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [Simple, fast routing engine](https://laravel.com/docs/routing).
+-   [Powerful dependency injection container](https://laravel.com/docs/container).
+-   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+-   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+-   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+-   [Robust background job processing](https://laravel.com/docs/queues).
+-   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
@@ -35,19 +35,19 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-   **[Vehikl](https://vehikl.com/)**
+-   **[Tighten Co.](https://tighten.co)**
+-   **[WebReinvent](https://webreinvent.com/)**
+-   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+-   **[64 Robots](https://64robots.com)**
+-   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+-   **[Cyber-Duck](https://cyber-duck.co.uk)**
+-   **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+-   **[Jump24](https://jump24.co.uk)**
+-   **[Redberry](https://redberry.international/laravel/)**
+-   **[Active Logic](https://activelogic.com)**
+-   **[byte5](https://byte5.de)**
+-   **[OP.GG](https://op.gg)**
 
 ## Contributing
 
@@ -64,3 +64,102 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Cloning the Project
+
+To clone the project repository, follow these steps:
+
+1. Open your terminal.
+2. Run the following command to clone the repository:
+    ```
+    git clone https://github.com/erwinhermantodev/collect-random-user.git
+    ```
+    Replace `https://github.com/erwinhermantodev/collect-random-user.git` with the URL of the project repository.
+
+## Installation
+
+After cloning the project, navigate to the project directory and follow these steps to install the dependencies:
+
+1. Navigate to the project directory:
+
+    ```
+    cd collect-random-user
+    ```
+
+    Replace `collect-random-user` with the directory where you cloned the project.
+
+2. Install Composer dependencies:
+
+    ```
+    composer install
+    ```
+
+3. Create a `.env` file by copying the `.env.example` file:
+
+    ```
+    cp .env.example .env
+    ```
+
+4. Generate an application key:
+
+    ```
+    php artisan key:generate
+    ```
+
+5. Update the `.env` file with your database configuration and other necessary settings.
+
+## Running the Project
+
+To run the project, follow these steps:
+
+1. Start the Laravel development server:
+
+    ```
+    php artisan serve
+    ```
+
+2. Access the project in your web browser at `http://localhost:8000`.
+
+## Setting up Cron Jobs
+
+To set up cron jobs for running scheduled tasks in the project, follow these steps:
+
+1. Open your terminal.
+
+2. Edit the crontab file using the following command:
+
+    ```
+    crontab -e
+    ```
+
+3. Add the following cron job to run the Laravel scheduler every minute:
+
+    ```
+    * * * * * cd /path/to/your/project && php artisan schedule:run >> /dev/null 2>&1
+    ```
+
+    Replace `/path/to/your/project` with the absolute path to your project directory.
+
+4. Save and exit the crontab editor.
+
+## Endpoints
+
+### User Endpoints
+
+-   **List Users:**
+
+    -   Method: `GET`
+    -   Endpoint: `/users`
+    -   Description: Get a list of all users.
+
+-   **Delete User:**
+    -   Method: `DELETE`
+    -   Endpoint: `/users/{id}`
+    -   Description: Delete a user by ID.
+
+### Daily Record Endpoints
+
+-   **List Daily Records:**
+    -   Method: `GET`
+    -   Endpoint: `/daily-records`
+    -   Description: Get a list of all daily records.
